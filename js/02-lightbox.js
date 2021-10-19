@@ -12,11 +12,10 @@ galleryContainer.insertAdjacentHTML("beforeend", cardsMarkup);
 function createCardsMarkup(cards) {
     return cards
     .map(({preview, original, description}) => {
-        return `<div class="gallery__item">
+        return `
         <a class="gallery__item" href="${original}">
-  <img class="gallery__image" src="${preview}" alt="${description}" />
-</a>
-      </div>`;
+        <img class="gallery__image" src="${preview}" alt="${description}" />
+        </a>`;
     })
     .join("");
 }
